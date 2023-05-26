@@ -9,6 +9,7 @@ import { instruments } from './helpers/instruments';
 
 
 
+
 const search = document.querySelector('.js-search');
 const list = document.querySelector('.js-list');
 const favoriteArr = JSON.parse(localStorage.getItem(common.KEY_FAVORITE)) ?? [];
@@ -51,4 +52,15 @@ function findProduct(elem) {
     const productId = Number(elem.closest('.js-card').dataset.id);
 
   return instruments.find(({id}) => id === productId )
+}
+
+
+search.addEventListener('input', handleSearch);
+
+function handleSearch() {
+  const searchValue = search.value.toLowerCase();
+  const filteredProducts = instruments.filter(product =>
+    product.name.toLowerCase().includes(searchValue)
+  );
+  createMarkup(filteredProducts, list);
 }

@@ -1,4 +1,70 @@
+/* Стилі для поля вводу */
+li {
+  list-style: none;
+}
+
+.js-search {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Стилі для посилань у хедері */
+header a {
+  margin-right: 10px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Стилі для кнопок Add to Favorite та Remove from Favorite */
+.js-favorite,
+.js-remove-favorite,
+.js-basket,
+.js-close-modal {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.js-basket {
+  background-color: green;
+}
+
+.js-close-modal {
+  background-color: brown;
+}
+
+/* Стилі для модального вікна */
 .modal {
-  width: 600px;
-  background-color: white;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal button {
+  margin-top: 10px;
 }
